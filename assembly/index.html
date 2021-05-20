@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mogo</title>
+    <link rel="stylesheet" href="src/css/jquery.pagepiling.min.css">
+    <link rel="stylesheet" href="build/css/normalize.css">
+    <link rel="stylesheet" href="build/css/style.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="pagepiling">
+        <div class="section sec1">
+            <h1>&mdash; Магнітне Поле &mdash;</h1>
+            <h3>Магні́тне по́ле — складова електромагнітного поля, <br>
+                за допомогою якої здійснюється взаємодія між рухомими <br>
+                електрично зарядженими частинками. 
+            </h3>
+            <!-- <img src="./img/first_image.jpg" alt=""> -->
+        </div>
+        <div class="section sec2">
+            <h1>&mdash; Трохи теорії &mdash;</h1>
+            <h3>Магнітне поле - складова електромагнітного поля, яка створюється 
+                змінним <br> у часі електричним полем, рухомими електричними зарядами або спінами заряджених частинок. <br>Магнітне поле спричиняє силову
+                дію на рухомі електричні заряди.
+            </h3>
+        </div>
+        <div class="section sec3">
+            <h1>&mdash; Постійний магніт &mdash;</h1>
+            <h3> 
+                або просто магніт — тіло, навколо якого існує магнітне поле без протікання у ньому <br> макроскопічного струму.</h3>
+        </div>
+        <div class="section sec4">
+            <h1>&mdash; Електромагнітна індукція &mdash;</h1>
+            <h3>виникнення електрорушійної сили у провіднику, що перебуває <br> 
+                у змінному магнітному полі. </h3>
+        </div>
+        <div class="section sec5">
+            <h1>&mdash; Лінії магнітної  індукції &mdash;</h1>
+            <h3>Лінії магнітної індукції – це характеристика магнітного поля. Вони є замкнуті.</h3>
+        </div>
+        <div class="section sec6">
+            <h1>&mdash; Дякую за увагу &mdash;</h1>
+            <video src="./video/charli_chaplin.mp4" loop autoplay muted>
+        </div>
+    </div>
+
+    <style> 
+
+        /* ! 1 */
+        #pagepiling .section.sec1 {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('./src/jquery/img/1.jpg');
+        }
+        #pagepiling .section.sec1::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* ! 2 */
+
+        #pagepiling .section.sec2 {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('./src/jquery/img/2.jpg');
+        }
+        #pagepiling .section.sec2::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* ! 3 */
+
+        #pagepiling .section.sec3 {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('./src/jquery/img/3.jpg');
+            filter: grayscale(100%);
+        }
+        #pagepiling .section.sec3::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* ! 4 */
+
+        #pagepiling .section.sec4 {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('./src/jquery/img/4.jpg');
+            filter: grayscale(100%);
+        }
+        #pagepiling .section.sec4::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 5 */
+
+        #pagepiling .section.sec5 {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('./src/jquery/img/6.jpg');
+            filter: grayscale(100%);
+        }
+        #pagepiling .section.sec5::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="src/jquery/jquery.pagepiling.min.js"></script>
+    <script src="https://kit.fontawesome.com/160a5bf21a.js" crossorigin="anonymous"></script>
+    <script defer src="build/js/script.js"></script>
+
+    <script type="text/javascript">
+$(document).ready(function() {
+	$('#pagepiling').pagepiling({
+	    menu: null,
+        direction: 'vertical',
+        verticalCentered: true,
+        sectionsColor: ['none', 'grey', 'yellow', 'grey'],
+        anchors: [],
+        scrollingSpeed: 100,
+        easing: 'swing',
+        loopBottom: true,
+        loopTop: false,
+        css3: true,
+        navigation: {
+            // 'textColor': '#000',
+            'bulletsColor': '#ffffff',
+            'position': 'right'
+            // 'tooltips': ['section1', 'section2', 'section3', 'section4']
+        },
+       	normalScrollElements: null,
+        normalScrollElementTouchThreshold: 5,
+        touchSensitivity: 5,
+        keyboardScrolling: true,
+        sectionSelector: '.section',
+        animateAnchor: false,
+
+		//events
+		onLeave: function(index, nextIndex, direction){},
+		afterLoad: function(anchorLink, index){},
+		afterRender: function(){},
+	});
+});
+    </script>
+
+</body>
+</html>
